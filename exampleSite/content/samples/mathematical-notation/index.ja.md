@@ -9,37 +9,40 @@ tags: ["sample", "katex", "maths", "shortcodes"]
 
 <!--more-->
 
-Congoは、数学的記法を使用する場合にのみ、KaTeXアセットをプロジェクトにバンドルします。これを動作させるために、congoは `katexblock` と `katexinline` という2つのショートコードを提供しています。
-どちらのショートコードでも、そのページのKaTeX構文は自動的にレンダリングされます。
+Congoは、数学的記法を使用する場合にのみ、KaTeXアセットをプロジェクトにバンドルします。これを動作させるために、congoは `katex block` または `katex inline` で使用できるショートコード [`katex`]({{< ref path="docs/shortcodes#katex" lang="en" >}}) を提供しています。
+ショートコード内のKaTeX構文は自動的にレンダリングされます。
 
 利用可能な構文については[サポートされているTeX関数](https://katex.org/docs/supported.html)のオンラインリファレンスを参照してください。
 
 
 ## インライン記法
 
-インライン記法は `katexinline` ショートコードで式をラップすることで生成できる。
+インライン記法は `katex inline` または `katex` ショートコードで式をラップすることで生成できる。
 
 **例:**
 
 ```tex
 % KaTeX inline notation
-インライン記法: {{</* katexinline */>}}\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…{{</* /katexinline */>}}
+インライン記法: {{</* katex inline */>}}\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…{{</* /katex */>}}
+速記版: {{</* katex */>}}\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…{{</* /katex */>}}
 ```
-インライン記法: {{< katexinline >}}\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…{{< /katexinline >}}
+インライン記法: {{< katex inline >}}\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…{{< /katex >}}
+
+速記版: {{< katex >}}\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…{{< /katex >}}
 
 ## ブロック記法
 
-別の方法として、`katexblock`ショートコードを使ってブロック記法を生成することもできます。これは式を独自のHTMLブロックで出力します。
+また、`block` パラメータを使ってブロック表記を生成することもできます。これは式を独自のHTMLブロックで出力します。
 
 **例:**
 
 ```tex
 % KaTeX block notation
-{{</* katexblock */>}}
+{{</* katex block */>}}
  \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-{{</* /katexblock */>}}
+{{</* /katex */>}}
 ```
 
-{{< katexblock >}}
+{{< katex block >}}
  \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-{{< /katexblock >}}
+{{< /katex >}}

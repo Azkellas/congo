@@ -175,28 +175,28 @@ Congoは、標準的なMarkdown構文を使用した場合の画像について�
 
 ## Katex
 
-数式は `katexblock` (ブロック表現用) または `katexinline` (インライン表現用) ショートコードを使用してレンダリングすることができます。KaTeXライブラリを使用して、記事内の数学表記をレンダリングします。
+数式は `katex` ショートコードを使用し、パラメータに `block` (ブロック式の場合) または `inline` を指定してレンダリングすることができます。詳細は[数学的表記]({{< ref "mathematical-notation" >}})を参照してください。
 
 利用可能な構文については[サポートされているTeX関数](https://katex.org/docs/supported.html)のオンラインリファレンスを参照してください。
 
 **例:**
 
 ```
-インライン記法: {{</* katexinline */>}}f(a,b,c) = (a^2+b^2+c^2)^3{{</* /katexinline */>}}
+インライン記法: {{</* katex inline */>}}f(a,b,c) = (a^2+b^2+c^2)^3{{</* /katex */>}}
 ```
-インライン記法: {{< katexinline >}}f(a,b,c) = (a^2+b^2+c^2)^3{{< /katexinline >}}
+インライン記法: {{< katex inline >}}f(a,b,c) = (a^2+b^2+c^2)^3{{< /katex >}}
 
 ブロック表記
 
 ```md
-{{</* katexblock */>}}
+{{</* katex block */>}}
 f(a,b,c) = (a^2+b^2+c^2)^3
-{{</* /katexblock */>}}
+{{</* /katex */>}}
 ```
 
-{{< katexblock>}}
+{{< katex block>}}
 f(a,b,c) = (a^2+b^2+c^2)^3
-{{< /katexblock>}}
+{{< /katex>}}
 
 [数学的表記のサンプル]({{< ref "mathematical-notation" >}})でより多くの例をチェックしてください。
 
