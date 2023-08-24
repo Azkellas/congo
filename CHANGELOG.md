@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - URL to Congo project in footer used deprecated git.io short link ([#605](https://github.com/jpanther/congo/pull/605))
 - Various typos in the docs and example site ([#608](https://github.com/jpanther/congo/pull/608), [#609](https://github.com/jpanther/congo/pull/609), [#613](https://github.com/jpanther/congo/pull/613))
+- Properly render KaTeX formulas by replacing `katex` shortcode by `katexinline` and `katexblock`([#633](https://github.com/jpanther/congo/issues/633))
 
 ## [2.6.1] - 2023-06-04
 
