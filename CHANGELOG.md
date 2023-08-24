@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - Hamburger menu is not dismissed when links are clicked ([#705](https://github.com/jpanther/congo/pull/705))
+- Properly render KaTeX formulas by replacing `katex` shortcode by `katexinline` and `katexblock`([#633](https://github.com/jpanther/congo/issues/633))
 
 ### Removed
 

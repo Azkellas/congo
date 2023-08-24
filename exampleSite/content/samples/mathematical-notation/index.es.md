@@ -9,38 +9,39 @@ Una breve muestra de notación matemática en Congo.
 
 <!--more-->
 
-{{< katex >}}
 
-Congo solo incluirá los assets de KaTeX en su proyecto si utiliza notación matemática. Para que esto funcione, simplemente incluya el [`katex` shortcode]({{< ref path="docs/shortcodes#katex" lang="en" >}}) dentro del artículo. Cualquier sintaxis de KaTeX en esa página se renderizará automáticamente.
+Congo sólo incluirá los recursos de KaTeX en su proyecto si hace uso de la notación matemática. Para que esto funcione, congo proporciona dos shortcodes: [`katexblock` y `katexinline`]({{< ref path="docs/shortcodes#katex" lang="en" >}}).
+Cualquier sintaxis KaTeX en esa página dentro de cualquiera de los dos shortcodes se renderizará automáticamente.
 
 Utilice la documentación en línea de [funciones TeX admitidas](https://katex.org/docs/supported.html) para conocer la sintaxis disponible.
 
 ## Notación en línea
 
-La notación en línea se puede generar envolviendo la expresión en los delimitadores `\\(` y `\\)`.
+La notación inline puede generarse envolviendo la expresión en el shortcode `katexinline`.
 
 **Ejemplo:**
 
 ```tex
 % KaTeX notación en línea
-Notación en línea: \\(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\\)
+Notación en línea: {{</* katexinline */>}}\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…{{</* /katexinline */>}}
 ```
 
-Notación en línea: \\(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\\)
+Notación en línea: {{< katexinline >}}\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…{{< /katexinline >}}
+
 
 ## Notación en bloque
 
-Alternativamente, la notación en bloque se puede generar usando delimitadores `$$`. Esto generará la expresión en su propio bloque HTML.
+Alternativamente, puede generarse una notación en bloque utilizando el shortcode `katexblock`. Esto mostrará la expresión en su propio bloque HTML.
 
 **Ejemplo:**
 
 ```tex
 % KaTeX notación en bloque
-$$
+{{</* katexblock */>}}
  \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-$$
+{{</* /katexblock */>}}
 ```
 
-$$
+{{< katexblock >}}
  \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-$$
+{{< /katexblock >}}
