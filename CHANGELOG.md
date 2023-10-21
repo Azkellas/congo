@@ -100,8 +100,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Plausible Analytics support ([#584](https://github.com/jpanther/congo/pull/584))
 - Spanish translation of example site samples ([#606](https://github.com/jpanther/congo/pull/606))
 - Japanese translation of docs and example site ([#618](https://github.com/jpanther/congo/pull/618))
-- German translation of example site ([#631](https://github.com/jpanther/congo/pull/631))
-- Properly render KaTeX formulas by adding `block` or `inline` parameter to `katex` shortcode [#634](https://github.com/jpanther/congo/pull/634)
 
 ### Changed
 
@@ -111,14 +109,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Upgrade to Mermaid v10.5.1 ([#577](https://github.com/jpanther/congo/pull/577), [#582](https://github.com/jpanther/congo/pull/582), [#626](https://github.com/jpanther/congo/pull/626), [#638](https://github.com/jpanther/congo/pull/638), [#663](https://github.com/jpanther/congo/pull/663), [#674](https://github.com/jpanther/congo/pull/674))
 - Upgrade to KaTeX v0.16.9 ([#590](https://github.com/jpanther/congo/pull/590), [#664](https://github.com/jpanther/congo/pull/664))
 - Upgrade to Tailwind v3.3.3 ([#602](https://github.com/jpanther/congo/pull/602))
-- Upgrade to ChartJS v4.3.3 ([#616](https://github.com/jpanther/congo/pull/616), [#627](https://github.com/jpanther/congo/pull/627), [#635](https://github.com/jpanther/congo/pull/635))
-- Upgrade to Typography v0.5.10 ([#641](https://github.com/jpanther/congo/pull/641))
+- Upgrade to ChartJS v4.3.3 ([#616](https://github.com/jpanther/congo/pull/616), [#627](https://github.com/jpanther/congo/pull/627))
 
 ### Fixed
 
-- Prominent images in content and site layout are lazy loaded ([#591](https://github.com/jpanther/congo/issues/591))
-- TypeError is output to console when viewing leaf pages ([#596](https://github.com/jpanther/congo/issues/596))
-- URL to Congo project in footer used deprecated git.io short link ([#605](https://github.com/jpanther/congo/issues/605))
+- URL to Congo project in footer used deprecated git.io short link ([#605](https://github.com/jpanther/congo/pull/605))
 - Various typos in the docs and example site ([#608](https://github.com/jpanther/congo/pull/608), [#609](https://github.com/jpanther/congo/pull/609), [#613](https://github.com/jpanther/congo/pull/613))
 - Incorrect `render` value is used in the 'external' archetype ([#630](https://github.com/jpanther/congo/pull/630))
 - Images are missing `width` and `height` attributes ([#645](https://github.com/jpanther/congo/pull/645))

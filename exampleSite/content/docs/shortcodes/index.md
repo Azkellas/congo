@@ -175,7 +175,7 @@ Icons can also be used in partials by calling the [icon partial]({{< ref "partia
 
 ## Katex
 
-Mathematical expressions can be rendered using either the `katex` shortcode, with either `block` (for block expression) or `inline` as parameter. See [mathematical notation]({{< ref "mathematical-notation" >}}) for more details.
+Mathematical expressions can be rendered using either the `katex block` (for block expression) or `katex inline` (for inline expression) shortcode.
 It uses the KaTeX library to render mathematical notation within articles.
 
 Refer to the online reference of [supported TeX functions](https://katex.org/docs/supported.html) for the available syntax.

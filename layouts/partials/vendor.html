@@ -1,20 +1,27 @@
 {{/* Mermaid */}}
 {{ if .Page.HasShortcode "mermaid" }}
-  {{ $mermaidLib := resources.Get "lib/mermaid/mermaid.min.js" }}
-  {{ $mermaidConfig := resources.Get "js/mermaid.js" }}
-  {{ $mermaidConfig := $mermaidConfig | resources.Minify }}
-  {{ $mermaidJS := slice $mermaidLib $mermaidConfig | resources.Concat "js/mermaid.bundle.js" | resources.Fingerprint "sha512" }}
-  <script defer type="text/javascript" src="{{ $mermaidJS.RelPermalink }}" integrity="{{ $mermaidJS.Data.Integrity }}"></script>
+{{ $mermaidLib := resources.Get "lib/mermaid/mermaid.min.js" }}
+{{ $mermaidConfig := resources.Get "js/mermaid.js" }}
+{{ $mermaidConfig := $mermaidConfig | resources.Minify }}
+{{ $mermaidJS := slice $mermaidLib $mermaidConfig | resources.Concat "js/mermaid.bundle.js" | resources.Fingerprint
+"sha512" }}
+<script defer type="text/javascript" src="{{ $mermaidJS.RelPermalink }}"
+  integrity="{{ $mermaidJS.Data.Integrity }}"></script>
 {{ end }}
 {{/* Chart */}}
 {{ if .Page.HasShortcode "chart" }}
-  {{ $chartLib := resources.Get "lib/chart/chart.umd.js" }}
-  {{ $chartConfig := resources.Get "js/chart.js" }}
-  {{ $chartConfig := $chartConfig | resources.Minify }}
-  {{ $chartJS := slice $chartLib $chartConfig | resources.Concat "js/chart.bundle.js" | resources.Fingerprint "sha512" }}
-  <script defer type="text/javascript" src="{{ $chartJS.RelPermalink }}" integrity="{{ $chartJS.Data.Integrity }}"></script>
+{{ $chartLib := resources.Get "lib/chart/chart.umd.js" }}
+{{ $chartConfig := resources.Get "js/chart.js" }}
+{{ $chartConfig := $chartConfig | resources.Minify }}
+{{ $chartJS := slice $chartLib $chartConfig | resources.Concat "js/chart.bundle.js" | resources.Fingerprint "sha512" }}
+<script defer type="text/javascript" src="{{ $chartJS.RelPermalink }}"
+  integrity="{{ $chartJS.Data.Integrity }}"></script>
 {{ end }}
 {{/* Katex */}}
-{{ if and (or (.Page.HasShortcode "katexblock") (.Page.HasShortcode "katexinline")) (not (.Page.HasShortcode "katexmacros")) }}
-  {{ partial "katex.html" "{}" }}
+{{ if (.Page.HasShortcode "katex") }}
+{{ $macros := .Page.Scratch.Get "katexCustomMacros" }}
+{{ if (eq $macros nil) }}
+  {{ $macros := "{}" }}
+{{ end }}
+{{ partial "katex.html" $macros }}
 {{ end }}
