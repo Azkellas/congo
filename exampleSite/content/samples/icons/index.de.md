@@ -1,21 +1,21 @@
 ---
-title: "Iconos"
+title: "Icons"
 date: 2020-08-14
 lastmod: 2023-01-23
 draft: false
-description: Soporte de iconos en Congo."
+description: "Icon-Unterstützung in Congo."
 slug: "icons"
-tags: ["icons", "sample", "shortcodes"]
+tags: ["Icons", "Beispiele", "Shortcodes"]
 showDateUpdated: true
 ---
 
-Congo tiene soporte integrado para varios íconos de [FontAwesome 6](https://fontawesome.com/icons). Estos se pueden incluir en su sitio web a través del [ícono parcial]({{< ref path="docs/partials#icon" lang="en" >}}) o el [código abreviado]({{< ref path="docs/shortcodes#icon" lang="en" >}}) del ícono.
+Congo hat integrierte Unterstützung für eine Reihe von Icons von [FontAwesome 6](https://fontawesome.com/icons). Diese können entweder über den Partial [icon]({{< ref path="docs/partials#icon" lang="en" >}}) oder Shortcode  [icon]({{< ref path="docs/shortcodes#icon" lang="en">}}) in deine Website eingebunden werden.
 
-Además, los íconos personalizados también son totalmente compatibles. Simplemente proporcione sus propios archivos en formato SVG y coloquelos en el directorio `assets/icons/` en la raíz de su proyecto. Cualquier ícono en el directorio de íconos estará disponible para usar en todo el tema.
+Darüber hinaus werden auch benutzerdefinierte Icons vollständig unterstützt. Du kannst deine eigenen SVG-Icon-Assets im Ordner `assets/icons/` im Stammverzeichnis deines Projekts ablegen. Alle Icons in diesem Verzeichnis stehen dann im gesamten Theme zur Verfügung.
 
-La lista completa de íconos incorporados y sus nombres correspondientes se pueden consultar a continuación.
+Die vollständige Liste der integrierten Icons und ihre entsprechenden Namen findest du unten.
 
-| Nombre del ícono     | Previsualización                  |
+| Icon-Name            | Vorschau                          |
 | -------------------- | --------------------------------- |
 | amazon               | {{< icon amazon >}}               |
 | apple                | {{< icon apple >}}                |

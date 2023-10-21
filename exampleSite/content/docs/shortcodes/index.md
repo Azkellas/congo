@@ -175,7 +175,7 @@ Icons can also be used in partials by calling the [icon partial]({{< ref "partia
 
 ## Katex
 
-Mathematical expressions can be rendered using either the `katexblock` (for block expression) or `katexinline` (for inline expression) shortcode.
+Mathematical expressions can be rendered using either the `katex` shortcode, with either `block` (for block expression) or `inline` as parameter. See [mathematical notation]({{< ref "mathematical-notation" >}}) for more details.
 It uses the KaTeX library to render mathematical notation within articles.
 
 Refer to the online reference of [supported TeX functions](https://katex.org/docs/supported.html) for the available syntax.
@@ -183,20 +183,20 @@ Refer to the online reference of [supported TeX functions](https://katex.org/doc
 **Example:**
 
 ```
-Inline notation: {{</* katexinline */>}}f(a,b,c) = (a^2+b^2+c^2)^3{{</* /katexinline */>}}
+Inline notation: {{</* katex inline */>}}f(a,b,c) = (a^2+b^2+c^2)^3{{</* /katex */>}}
 ```
-Inline notation: {{< katexinline >}}f(a,b,c) = (a^2+b^2+c^2)^3{{< /katexinline >}}
+Inline notation: {{< katex inline >}}f(a,b,c) = (a^2+b^2+c^2)^3{{< /katex >}}
 
 Block notation:
 ```
-{{</* katexblock */>}}
+{{</* katex block */>}}
 f(a,b,c) = (a^2+b^2+c^2)^3
-{{</* /katexblock */>}}
+{{</* /katex */>}}
 ```
 
-{{< katexblock >}}
+{{< katex block >}}
 f(a,b,c) = (a^2+b^2+c^2)^3
-{{< /katexblock >}}
+{{< /katex >}}
 
 Check out the [mathematical notation samples]({{< ref "mathematical-notation" >}}) page for more examples.
 
