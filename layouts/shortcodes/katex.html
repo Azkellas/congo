@@ -1,8 +1,14 @@
 {{ $mode := .Get 0 }}
-{{ if eq $mode "block" }}
-  $${{.Inner}}$$
+{{ if eq $mode "macros" }}
+{{ $macros := trim .Inner "\r\n" }}
+{{ $macros := replace $macros "\\" "\\\\" }}
+{{ $macros := replace $macros "\n" ",\n" }}
+{{ $macros := printf "{%s}" $macros }}
+{{ .Page.Scratch.Set "katexCustomMacros" $macros}}
+{{ else if eq $mode "block" }}
+$${{.Inner}}$$
 {{ else if or (eq $mode "inline") (eq $mode nil) }}
-  \({{.Inner}}\)
+\({{.Inner}}\)
 {{ else }}
-  {{ errorf "Invalid katex mode: expected block or inline" }}
+{{ errorf "Invalid katex mode: expected block, inline, or macros" }}
 {{ end }}
